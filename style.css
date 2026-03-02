@@ -480,7 +480,19 @@ body.dark-mode .main-quote {
         padding-top: 20px;
         padding-bottom: 20px;
     }
+@media (max-width: 1024px) {
+    .cards {
+        /* Em tablets, mostra 2 cards por linha */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
 
+@media (max-width: 768px) {
+    .cards {
+        /* Em celulares, mostra 1 card por linha */
+        grid-template-columns: 1fr; 
+    }
+}
     header {
         padding: 0 10px; /* Reduz o preenchimento lateral no mobile */
     }
