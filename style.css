@@ -80,7 +80,22 @@ header {
     color: var(--primary);
     letter-spacing: -0.03em;
 }
-
+/* Ajuste para tablets e celulares (Responsividade) */
+@media (max-width: 768px) {
+    header {
+        height: auto !important; /* Permite que o cabeçalho cresça se precisar */
+        min-height: 80px;
+        flex-wrap: wrap; /* Permite que os links desçam para a linha de baixo se faltar espaço */
+        padding: 15px 10px;
+        justify-content: center; /* Centraliza tudo no mobile */
+        gap: 15px;
+    }
+    
+    /* Impede a logo de ser espremida pelo Safari */
+    .logo {
+        flex-shrink: 0; 
+    }
+}
 nav ul {
     display: flex;
     align-items: center;
@@ -200,6 +215,25 @@ body.dark-mode .btn-nav:hover {
     border-radius: 30px; /* Mantém o padrão arredondado que ficou ótimo no sobre mim */
    /* height: auto;  */         /* Mantém a proporção da foto sem achatar */
     box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Sombra para profundidade */
+}
+
+@media (max-width: 768px) {
+    .hero-container {
+        flex-direction: column !important; /* Força os itens a ficarem um embaixo do outro */
+        text-align: center; /* Centraliza o texto no celular */
+        gap: 30px;
+    }
+    
+    .hero-content {
+        text-align: center; /* Sobrepõe o alinhamento à esquerda no mobile */
+    }
+
+    /* Corrige o bug de encolhimento do Safari */
+    .hero-content, 
+    .hero-image {
+        width: 100% !important; 
+        flex: none !important; /* Desativa o flex: 1 que confunde o Safari */
+    }
 }
 
 /* 1. PADRONIZAÇÃO DE BOTÕES (Substituindo o azul antigo) */
@@ -471,12 +505,19 @@ body.dark-mode .main-quote {
         background-color: var(--bg-light) !important; /* Ou use var(--accent) se quiser o tom Areia */
     }
 
-/* 4. RESPONSIVIDADE (FIX PARA CELULAR) */
+/* Ajuste para tablets e celulares (Responsividade) Sessões de texto*/
 @media (max-width: 768px) {
     .split-container, .inverted {
         flex-direction: column !important;
         text-align: center;
         gap: 30px;
+    }
+    
+    /* ADIÇÃO: Previne que o Safari quebre as colunas nas seções Sobre/Abordagem */
+    .split-content, 
+    .split-image {
+        width: 100% !important;
+        flex: none !important;
     }
 }
 .link-destaque {
