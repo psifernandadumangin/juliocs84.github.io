@@ -808,22 +808,24 @@ body.dark-mode .main-quote {
     text-align: center;           /* Centraliza ícones, títulos e textos */
 }
 
-/* ESTILO DOS TÍTULOS */
+/* ESTILO DOS TÍTULOS E ÍCONES */
 .info-item h3 {
-    font-family: 'Playfair Display', serif !important; /* Fonte dos títulos */
-    color: #4F6D6A;               /* Verde Profundo */
+    font-family: 'Playfair Display', serif !important;
+    color: #4F6D6A;
     font-size: 1.6rem;
-    margin-bottom: 15px;
+    
+    /* O truque do alinhamento perfeito: */
     display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;                    /* Espaço exato entre a "caixa" do ícone e a palavra */
+    width: 220px;                 /* Cria uma caixa do mesmo tamanho para os dois */
+    margin: 0 auto 15px auto;     /* Centraliza essa caixa na tela */
+    justify-content: flex-start;  /* Joga o ícone e o texto para o começo da caixa */
+    gap: 12px;                    /* Espaço entre o ícone e a palavra */
 }
 
-/* O SEGREDO DO ALINHAMENTO: Tamanho fixo para os ícones */
+/* Garante que os ícones ocupem o mesmo espaço na esquerda */
 .info-item h3 i {
-    width: 32px;                  /* Força o relógio e o globo a terem a exata mesma largura */
-    text-align: center;           /* Centraliza o desenho do ícone dentro desse espaço de 32px */
+    width: 30px;
+    text-align: center;
 }
 
 /* ESTILO DO TEXTO */
