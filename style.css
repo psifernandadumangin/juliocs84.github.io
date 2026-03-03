@@ -81,18 +81,19 @@ header {
     letter-spacing: -0.03em;
 }
 /* Ajuste para tablets e celulares (Responsividade) */
-/* Padronização do Header no Mobile */
+@media (max-width: 768px) {
     header {
-        height: auto !important; /* Permite crescer a altura se o nome quebrar */
+        height: auto !important; /* Permite que o cabeçalho cresça se precisar */
         min-height: 80px;
-        padding: 10px 5%;
-        flex-wrap: wrap; /* Permite links descerem se necessário */
+        flex-wrap: wrap; /* Permite que os links desçam para a linha de baixo se faltar espaço */
+        padding: 15px 10px;
+        justify-content: center; /* Centraliza tudo no mobile */
+        gap: 15px;
     }
+    
+    /* Impede a logo de ser espremida pelo Safari */
     .logo {
-        flex-shrink: 0; /* Impede o Safari de espremer o nome */
-    }
-    .logo span {
-        font-size: 1rem !important; /* Diminui a fonte do nome para caber */
+        flex-shrink: 0; 
     }
 }
 nav ul {
@@ -216,52 +217,30 @@ body.dark-mode .btn-nav:hover {
     box-shadow: 0 20px 40px rgba(0,0,0,0.1); /* Sombra para profundidade */
 }
 
-/* 1. Ativa a regra para telas de celular */
 @media (max-width: 768px) {
-    
-    /* 2. Mantém o container lado a lado (Texto + Foto) */
     .hero-container {
-        display: flex !important;
-        flex-direction: row !important; /* Força o layout lado a lado */
-        align-items: center;
-        justify-content: space-between;
-        gap: 10px !important; /* Espaço pequeno para caber tudo */
-        padding: 0 10px; /* Adiciona respiro nas bordas do celular */
+        flex-direction: column !important; /* Força os itens a ficarem um embaixo do outro */
+        text-align: center; /* Centraliza o texto no celular */
+        gap: 30px;
     }
     
-    /* 3. Ajusta o espaço do texto */
     .hero-content {
-        flex: 1 !important; /* Texto ocupa o espaço que sobrar */
-        text-align: left; /* Mantém alinhado à esquerda como no PC */
+        text-align: center; /* Sobrepõe o alinhamento à esquerda no mobile */
     }
 
-    /* 4. O TRUQUE DE OURO: Diminuir o tamanho da imagem no mobile */
-    .hero-image img {
-        /* Define um tamanho máximo fixo para a foto não espremer o texto */
-        max-width: 120px !important; 
-        height: auto !important; /* Mantém a proporção redonda */
+    /* Corrige o bug de encolhimento do Safari */
+    .hero-content, 
+    .hero-image {
+        width: 100% !important; 
+        flex: none !important; /* Desativa o flex: 1 que confunde o Safari */
     }
+}
 
-    /* 5. ESSENCIAL: Reduzir as fontes para caberem lado a lado */
-    .hero-content h1 {
-        font-size: 1.6rem !important; /* Título bem menor para celular */
-        margin-bottom: 5px;
-        line-height: 1.2;
-    }
-    
-    .hero-content p {
-        font-size: 0.8rem !important; /* Parágrafo menor */
-        margin-bottom: 10px;
-        line-height: 1.4;
-    }
-    
 /* 1. PADRONIZAÇÃO DE BOTÕES (Substituindo o azul antigo) */
 .cta-button { 
     background-color: var(--primary); /* Verde Sálvia #6F8E8B */
     color: var(--white) !important; 
-     /*  padding: 15px 30px;  */
-    padding: 10px 20px !important;
-    font-size: 0.9rem !important;
+    padding: 15px 30px; 
     border-radius: 12px; 
     text-decoration: none; 
     font-weight: 600; 
