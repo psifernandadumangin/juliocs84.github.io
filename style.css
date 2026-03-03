@@ -1017,36 +1017,139 @@ footer, .footer {
         font-size: 1.6rem !important;
     }
 }
-/* AJUSTE PARA A FRASE NO DARK MODE */
-body.dark-mode .quote-section {
-    background-color: #3d5654 !important; /* Um tom de verde ainda mais fechado */
+/* ============================================================
+   🌙 MODO ESCURO GERAL (DARK MODE FULL SITE)
+   Coloque isso sempre no final do arquivo CSS para sobrepor as outras regras
+   ============================================================ */
+
+/* 1. FUNDO GERAL E TEXTO BASE */
+body.dark-mode {
+    background-color: #121212 !important; /* Grafite quase preto */
+    color: #E0E0E0 !important;
 }
 
-/* =========================================
-   REGRAS DO MODO ESCURO PARA AS SEÇÕES
-   ========================================= */
-
-/* Fundo da seção de horários no modo escuro */
-body.dark-mode .info-pratica {
-    background-color: #1A1A1A !important; /* Fundo escuro */
+/* 2. CABEÇALHO E NAVEGAÇÃO (HEADER) */
+body.dark-mode header {
+    background: rgba(26, 26, 26, 0.95) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+body.dark-mode .logo {
+    color: #A3C4C1 !important; /* Verde mais claro para dar leitura */
+}
+body.dark-mode .logo-icon {
+    background-color: #262626 !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+body.dark-mode nav a {
+    color: #E0E0E0 !important;
+}
+body.dark-mode nav a:hover {
+    color: #A3C4C1 !important;
 }
 
-/* Cor dos títulos (Horários, Atendimento) no modo escuro */
-body.dark-mode .info-item h3 {
-    color: #A3C4C1 !important; /* Um verde mais clarinho para dar leitura no fundo escuro */
+/* 3. CORES DE FUNDO DAS SEÇÕES (SOBREPONDO AS TABELAS) */
+body.dark-mode .section-split {
+    background-color: #1A1A1A !important; /* Escuro base */
 }
-
-/* Cor dos textos menores no modo escuro */
-body.dark-mode .info-item p {
-    color: #E0E0E0 !important; /* Cinza claro/Branco */
+body.dark-mode .alternate-bg {
+    background-color: #262626 !important; /* Escuro um tom mais claro para destacar */
 }
-
-/* Você faria a mesma coisa para a seção #publico: */
-body.dark-mode #publico.section-split {
+body.dark-mode .accent-bg {
+    background-color: #2A2A2A !important;
+}
+body.dark-mode .bg-light {
     background-color: #1A1A1A !important;
 }
 
+/* 4. PADRONIZAÇÃO DE TÍTULOS E TEXTOS EM TODAS AS SEÇÕES */
+/* Isso cobre #sobre, #abordagem, #publico, #online, etc. */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode .hero-content h1,
+body.dark-mode .split-content h2,
+body.dark-mode #sobre .split-content h2,
+body.dark-mode #abordagem .split-content h2,
 body.dark-mode #publico .split-content h2,
-body.dark-mode #publico .split-content p {
-    color: #E0E0E0 !important;
+body.dark-mode #online .split-content h2 {
+    color: #F4F7F6 !important; /* Branco/Gelo para todos os títulos */
+}
+
+body.dark-mode p,
+body.dark-mode .hero-content p,
+body.dark-mode .split-content p,
+body.dark-mode #sobre .split-content p,
+body.dark-mode #abordagem .split-content p,
+body.dark-mode #publico .split-content p,
+body.dark-mode #online .split-content p,
+body.dark-mode .lista-beneficios li,
+body.dark-mode .publico-item {
+    color: #C4C4C4 !important; /* Cinza claro suave para leitura de textos longos */
+}
+
+/* 5. ÍCONES E LINKS ESPECÍFICOS */
+body.dark-mode .lista-beneficios i,
+body.dark-mode .publico-item i {
+    color: #A3C4C1 !important; /* Ícones em verde clarinho */
+}
+body.dark-mode .link-destaque {
+    color: #A3C4C1 !important;
+}
+body.dark-mode .link-destaque:hover {
+    color: #FFFFFF !important;
+}
+
+/* 6. DÚVIDAS FREQUENTES (FAQ) */
+body.dark-mode details {
+    background-color: #262626 !important;
+    border: 1px solid rgba(255,255,255,0.05) !important;
+}
+body.dark-mode summary {
+    color: #A3C4C1 !important; /* Pergunta */
+}
+body.dark-mode details p {
+    color: #C4C4C4 !important; /* Resposta */
+}
+
+/* 7. SEÇÃO HORÁRIOS E ATENDIMENTO (INFO-PRATICA) */
+body.dark-mode .info-pratica {
+    background-color: #1A1A1A !important;
+}
+body.dark-mode .info-item h3 {
+    color: #A3C4C1 !important;
+}
+body.dark-mode .info-item p {
+    color: #C4C4C4 !important;
+}
+
+/* 8. CARDS (ESPECIALIDADES) */
+body.dark-mode .card {
+    background-color: #262626 !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+}
+body.dark-mode .card h3 {
+    color: #F4F7F6 !important;
+}
+body.dark-mode .card p {
+    color: #C4C4C4 !important;
+}
+body.dark-mode .card i {
+    color: #A3C4C1 !important;
+}
+
+/* 9. RODAPÉ (FOOTER) */
+body.dark-mode .footer {
+    background-color: #121212 !important;
+    border-top: 1px solid rgba(255,255,255,0.1) !important;
+}
+body.dark-mode .footer-info h3 {
+    color: #A3C4C1 !important;
+}
+body.dark-mode .footer-crp-status,
+body.dark-mode .footer-copyright p {
+    color: #888888 !important; /* Cinza mais escuro para notas de rodapé */
+}
+body.dark-mode .social-icon {
+    color: #C4C4C4 !important;
 }
