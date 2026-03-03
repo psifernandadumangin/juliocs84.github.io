@@ -1021,3 +1021,32 @@ footer, .footer {
 body.dark-mode .quote-section {
     background-color: #3d5654 !important; /* Um tom de verde ainda mais fechado */
 }
+
+/* =========================================
+   REGRAS DO MODO ESCURO PARA AS SEÇÕES
+   ========================================= */
+
+/* Fundo da seção de horários no modo escuro */
+body.dark-mode .info-pratica {
+    background-color: #1A1A1A !important; /* Fundo escuro */
+}
+
+/* Cor dos títulos (Horários, Atendimento) no modo escuro */
+body.dark-mode .info-item h3 {
+    color: #A3C4C1 !important; /* Um verde mais clarinho para dar leitura no fundo escuro */
+}
+
+/* Cor dos textos menores no modo escuro */
+body.dark-mode .info-item p {
+    color: #E0E0E0 !important; /* Cinza claro/Branco */
+}
+
+/* Você faria a mesma coisa para a seção #publico: */
+body.dark-mode #publico.section-split {
+    background-color: #1A1A1A !important;
+}
+
+body.dark-mode #publico .split-content h2,
+body.dark-mode #publico .split-content p {
+    color: #E0E0E0 !important;
+}
