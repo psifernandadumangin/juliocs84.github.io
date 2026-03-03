@@ -339,6 +339,7 @@ body.dark-mode .main-quote {
         padding: 80px 10%;
     }
     
+/* CONTAINER PRINCIPAL DOS CARDS */
 .cards {
     display: grid;
     /* Força 4 colunas de tamanhos iguais */
@@ -346,10 +347,26 @@ body.dark-mode .main-quote {
     gap: 20px; /* Espaço entre os cards */
     margin-top: 40px;
     width: 100%;
-    max-width: 1200px; /* Ajuste conforme a largura do seu site */
+    max-width: 1200px; /* Mantém tudo alinhado com o resto do site */
     margin-left: auto;
     margin-right: auto;
 }
+
+/* 4. RESPONSIVIDADE (FIX PARA CELULAR E TABLET) */
+@media (max-width: 1024px) {
+    .cards {
+        /* Em tablets ou telas menores, mostra 2 cards por linha */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (max-width: 768px) {
+    .cards {
+        /* Em celulares, mostra 1 card por linha */
+        grid-template-columns: 1fr; 
+    }
+}
+
     /* 2. ESTRUTURA ZIGUE-ZAGUE (O MOTOR) */
     .section-split {
         padding: 80px 0;
@@ -480,19 +497,7 @@ body.dark-mode .main-quote {
         padding-top: 20px;
         padding-bottom: 20px;
     }
-@media (max-width: 1024px) {
-    .cards {
-        /* Em tablets, mostra 2 cards por linha */
-        grid-template-columns: repeat(2, 1fr); 
-    }
-}
 
-@media (max-width: 768px) {
-    .cards {
-        /* Em celulares, mostra 1 card por linha */
-        grid-template-columns: 1fr; 
-    }
-}
     header {
         padding: 0 10px; /* Reduz o preenchimento lateral no mobile */
     }
