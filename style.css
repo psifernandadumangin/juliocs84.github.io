@@ -219,7 +219,7 @@ body.dark-mode .btn-nav:hover {
 
 @media (max-width: 768px) {
     .hero-container {
-        flex-direction: column !important; /* Força os itens a ficarem um embaixo do outro */
+        flex-direction: column-reverse !important; /* Força os itens a ficarem um embaixo do outro */
         text-align: center; /* Centraliza o texto no celular */
         gap: 30px;
     }
