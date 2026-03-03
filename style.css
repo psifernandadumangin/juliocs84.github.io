@@ -1153,3 +1153,13 @@ body.dark-mode .footer-copyright p {
 body.dark-mode .social-icon {
     color: #C4C4C4 !important;
 }
+/* 10. CONSERTO DA FRASE DE IMPACTO NO MODO ESCURO */
+body.dark-mode .quote-section {
+    background-color: #1A1A1A !important; /* Fundo grafite combinando com o resto do site */
+    border-top: 1px solid rgba(255, 255, 255, 0.05) !important; /* Linha sutil para separar */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+body.dark-mode .main-quote {
+    color: #A3C4C1 !important; /* Verde Sálvia clarinho para a frase brilhar no escuro */
+}
