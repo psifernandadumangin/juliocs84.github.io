@@ -785,25 +785,13 @@ body.dark-mode .main-quote {
 
 /* Horários de Atendimento */
 
-/*Ajuste de Cores (Zigue-Zague) */
+/* Ajuste de Cores (Zigue-Zague) */
 .info-pratica {
     background-color: #F6F4EF !important; /* Fundo Off-white para destaque */
     padding: 60px 0;
     text-align: center;
 }
 
-.info-item h3 {
-    font-family: 'Playfair Display', serif !important; /* Fonte dos títulos */
-    color: #4F6D6A; /* Verde Profundo */
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-}
-
-.info-item p {
-    font-family: 'Lora', serif !important; /* Fonte do corpo */
-    color: #2F2F2F;
-    line-height: 1.6;
-}
 /* CONTAINER PRINCIPAL DO GRID */
 .info-grid {
     display: flex;                /* Ativa o alinhamento lado a lado */
@@ -820,24 +808,33 @@ body.dark-mode .main-quote {
     text-align: center;           /* Centraliza ícones, títulos e textos */
 }
 
-/* ESTILO DOS TÍTULOS E ÍCONES */
+/* ESTILO DOS TÍTULOS */
 .info-item h3 {
-    font-family: 'Playfair Display', serif !important;
-    color: #4F6D6A;               /* Verde Profundo para autoridade */
+    font-family: 'Playfair Display', serif !important; /* Fonte dos títulos */
+    color: #4F6D6A;               /* Verde Profundo */
     font-size: 1.6rem;
+    margin-bottom: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;                    /* Espaço entre o ícone e a palavra */
+    gap: 10px;                    /* Espaço exato entre a "caixa" do ícone e a palavra */
+}
+
+/* O SEGREDO DO ALINHAMENTO: Tamanho fixo para os ícones */
+.info-item h3 i {
+    width: 32px;                  /* Força o relógio e o globo a terem a exata mesma largura */
+    text-align: center;           /* Centraliza o desenho do ícone dentro desse espaço de 32px */
 }
 
 /* ESTILO DO TEXTO */
 .info-item p {
-    font-family: 'Lora', serif !important;
+    font-family: 'Lora', serif !important; /* Fonte do corpo */
     color: #2F2F2F;
+    line-height: 1.6;
     margin-bottom: 5px;           /* Diminui o espaço entre as linhas de texto */
 }
 
+/* RESPONSIVIDADE (Celular) */
 @media (max-width: 768px) {
     .info-grid {
         flex-direction: column;   /* No celular, eles voltam a ficar um sobre o outro */
