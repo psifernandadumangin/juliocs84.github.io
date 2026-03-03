@@ -499,7 +499,7 @@ body.dark-mode .main-quote {
         color: var(--text-color); /* Grafite #2F2F2F */
         line-height: 1.8;
     }
-    
+
     /* Garante que o fundo 'alternate-bg' use a cor Areia correta */
     .alternate-bg {
         background-color: var(--bg-light) !important; /* Ou use var(--accent) se quiser o tom Areia */
@@ -699,6 +699,41 @@ body.dark-mode .main-quote {
 /* Ajuste para celular */
 @media (max-width: 768px) {
     #abordagem .split-content {
+        padding: 0 20px;
+        align-items: flex-start !important;
+    }
+}
+
+ /* ============================================================
+   SEÇÃO: MINHA PUBLICO (ALINHAMENTO À ESQUERDA)
+   ============================================================ */
+   /* ESPELHANDO A REGRA DO SOBRE MIM PARA A ABORDAGEM */
+#publico.section-split {
+    padding: 100px 0;
+}
+
+#publico .split-content {
+    text-align: left !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o título e os textos à esquerda */
+}
+
+#publico .split-content h2 {
+    text-align: left !important;
+    margin-bottom: 25px;
+    width: 100%;
+}
+
+#publico .split-content p {
+    text-align: left !important;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+/* Ajuste para celular */
+@media (max-width: 768px) {
+    #publico .split-content {
         padding: 0 20px;
         align-items: flex-start !important;
     }
